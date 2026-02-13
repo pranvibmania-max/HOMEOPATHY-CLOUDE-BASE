@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homeopathy Radar Cloud</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/svg+xml" href="logo.svg">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <!-- LOGIN SCREEN -->
+    <div id="login-screen" class="login-container">
+        <div class="login-box">
+            <div class="login-logo">⚕</div>
+            <h2>Doctor Login</h2>
+            <p>Enter your access PIN to continue</p>
+            <input type="password" id="loginPin" placeholder="Enter PIN (1234)" maxlength="4"
+                style="text-align: center; font-size: 1.5rem; letter-spacing: 5px;">
+            <button onclick="attemptLogin()" class="primary" style="width: 100%; margin-top: 15px;">Access
+                System</button>
+            <p id="loginError" style="color: #ff6b6b; font-size: 0.9rem; margin-top: 10px; display: none;">Invalid PIN.
+                Try again.</p>
+        </div>
+    </div>
+
+    <!-- MAIN APP (Hidden until login) -->
+    <div id="mainApp" style="display: none;">
+        <nav class="top-nav">
+            <button onclick="window.location.reload()" class="nav-btn icon-only" title="Home">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                    <polyline points="9 22 9 12 15 12 15 22"></polyline>
+                </svg>
+            </button>
+            <button onclick="logout()" class="nav-btn" style="margin-left: auto; font-size: 0.9rem;">
+                Logout
+            </button>
+        </nav>
+        <div class="header">
+            <div style="display: flex; align-items: center; justify-content: center; gap: 20px; flex-wrap: wrap;">
+                <div>
+                    <h1>Dr. Bamania's Classical Homeopathy</h1>
+                    <p>Advanced Repertory & Patient Management System</p>
+                </div>
+                <img src="logo.svg" alt="Bamania's Homeopathy Logo"
+                    style="height: 140px; width: 140px; filter: drop-shadow(0 4px 6px rgba(0,0,0,0.3));">
+            </div>
+        </div>
+        <div class="container">
+
+            <div class="form-group">
+                <input id="name" type="text" placeholder="Patient Name" style="flex: 2;">
+                <input id="age" type="number" placeholder="Age" style="flex: 0 1 80px;">
+                <select id="gender" style="flex: 0 1 120px;">
+                    <option value="">Gender</option>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                    <option value="Other">Other</option>
+                </select>
+                <input id="mobile" type="tel" placeholder="Mobile Number" maxlength="10" pattern="\d{10}"
+                    oninput="this.value = this.value.replace(/[^0-9]/g, '')" style="flex: 1.5;">
+            </div>
+
+            <div class="form-group">
+                <textarea id="address" rows="1" placeholder="Address" style="resize: none;"></textarea>
+                <textarea id="complaint" rows="1" placeholder="Present Complaint / Chief Complaint"
+                    style="resize: none;"></textarea>
+            </div>
+
+            <h3>Symptoms</h3>
+            <div class="symptom-input-group">
+                <input id="symptom" list="symptom-suggestions" placeholder="Type or select a symptom...">
+                <datalist id="symptom-suggestions"></datalist>
+                <button onclick="addSymptom()">Add Symptom</button>
+            </div>
+
+            <div id="symptomList"></div>
+
+            <div class="form-group" style="margin-top: 20px;">
+                <button onclick="analyze()" style="width: 100%;">Analyze Case</button>
+            </div>
+
+            <div id="result"></div>
+
+            <h3>Prescription</h3>
+            <div id="prescription-date"
+                style="font-weight: bold; color: var(--primary-color); margin-bottom: 10px; font-family: 'Courier New', Courier, monospace;">
+            </div>
+
+            <div class="form-group" style="margin-bottom: 15px; display: flex; gap: 10px;">
+                <select id="frequency" style="flex: 1; padding: 10px;">
+                    <option value="">-- Select Frequency --</option>
+                    <option value="TDS (3 times a day)">TDS (3 times a day)</option>
+                    <option value="BD (2 times a day)">BD (2 times a day)</option>
+                    <option value="OD (Once a day)">OD (Once a day)</option>
+                    <option value="QDS (4 times a day)">QDS (4 times a day)</option>
+                    <option value="SOS (As needed)">SOS (As needed)</option>
+                </select>
+                <input id="duration" type="text" placeholder="Duration (e.g. 5 days)" style="flex: 1; padding: 10px;">
+                <button onclick="addDoseDetails()" class="secondary" style="flex: 0 0 auto;">Add to Rx</button>
+            </div>
+
+            <textarea id="prescription" rows="8" placeholder="Remedies and instructions will appear here..."
+                style="width: 100%; margin-bottom: 20px; font-family: 'Courier New', Courier, monospace; font-size: 1.1em;"></textarea>
+
+            <div class="form-group" style="gap: 10px;">
+                <button onclick="save()" class="secondary" style="flex: 1;">Approve & Save Record</button>
+                <button onclick="shareOnWhatsApp()"
+                    style="flex: 1; background-color: #25D366; display: flex; align-items: center; justify-content: center; gap: 10px;">
+                    <img src="whatsapp.svg" alt="WhatsApp" style="width: 20px; height: 20px;">
+                    Share on WhatsApp
+                </button>
+            </div>
+
+            <hr style="margin: 30px 0; border-top: 2px solid #e0e0e0;">
+
+            <div
+                style="text-align: center; margin-top: 30px; display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
+                <button onclick="viewCases()" class="secondary" style="width: auto;">View Saved Cases</button>
+                <button onclick="browseMateriaMedica()" class="primary"
+                    style="width: auto; background-color: var(--primary-color);">Browse Materia Medica</button>
+            </div>
+
+            <div id="searchContainer" style="display:none; margin-top: 20px; margin-bottom: 20px; text-align: center;">
+                <input type="text" id="caseSearchInput" placeholder="🔍 Search by Patient Name or Mobile Number..."
+                    oninput="filterCases()"
+                    style="width: 100%; max-width: 400px; padding: 12px 20px; border-radius: 30px; border: 1px solid var(--secondary-color); box-shadow: 0 2px 5px rgba(0,0,0,0.1); outline: none;">
+            </div>
+
+            <div id="caseList" style="margin-top: 20px;"></div>
+        </div>
+
+        <!-- Materia Medica Modal -->
+        <!-- Materia Medica Modal -->
+        <div id="mmModal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeMmModal()">&times;</span>
+                <h2 id="mmTitle">Remedy Name</h2>
+                <div id="mmContent">
+                    <!-- Content will be loaded here -->
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            &copy; 2026 Dr. Bamania's Classical Homeopathy. All rights reserved.
+        </div>
+    </div> <!-- END mainApp -->
+
+    <script src="app.js"></script>
+</body>
+
+</html>

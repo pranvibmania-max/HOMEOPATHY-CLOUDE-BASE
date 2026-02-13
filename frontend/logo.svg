@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300">
+  <defs>
+    <!-- Background Gradient (145deg) -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f2b24;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#061411;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- Glow Filter -->
+    <filter id="glow">
+      <feDropShadow dx="0" dy="0" stdDeviation="8" flood-color="#00ffaa" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+
+  <!-- Logo Container Box -->
+  <rect x="0" y="0" width="300" height="300" rx="20" fill="url(#bgGrad)" filter="url(#glow)"/>
+
+  <!-- Medical Symbol (Centred vertically relative to top section) -->
+  <text x="150" y="130" font-family="'Segoe UI', sans-serif" font-size="70" fill="#00e6a8" text-anchor="middle">⚕</text>
+
+  <!-- Clinic Name -->
+  <text x="150" y="190" font-family="'Segoe UI', sans-serif" font-weight="700" font-size="24" fill="#ffffff" text-anchor="middle">Dr. Bamania's</text>
+  
+  <!-- Subtitle -->
+  <text x="150" y="220" font-family="'Segoe UI', sans-serif" font-size="16" fill="#00e6a8" text-anchor="middle" letter-spacing="1">Classical Homeopathy</text>
+
+</svg>

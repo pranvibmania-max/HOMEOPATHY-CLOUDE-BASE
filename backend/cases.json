@@ -1,0 +1,162 @@
+[
+  {
+    "name": "test",
+    "age": "21",
+    "gender": "Male",
+    "symptoms": [
+      "fever with cold",
+      "cough and cold"
+    ],
+    "date": "2026-02-12T14:00:27.025Z"
+  },
+  {
+    "name": "test 1",
+    "age": "22",
+    "gender": "Male",
+    "symptoms": [
+      "dry cough",
+      "anxiety"
+    ],
+    "date": "2026-02-12T14:05:50.798Z"
+  },
+  {
+    "name": "test 3",
+    "age": "21",
+    "gender": "Male",
+    "symptoms": [
+      "fever with cold and abdomen pain at night"
+    ],
+    "prescription": "",
+    "date": "2026-02-12T14:14:52.218Z"
+  },
+  {
+    "name": "narayan",
+    "age": "25",
+    "gender": "Male",
+    "symptoms": [
+      "dry cough",
+      "headache",
+      "skin rash"
+    ],
+    "prescription": "bryonia 30 \naconite 200",
+    "date": "2026-02-12T14:15:54.221Z"
+  },
+  {
+    "name": "Dr Narayan Singh Bamania",
+    "age": "22",
+    "gender": "Male",
+    "mobile": "9300119509",
+    "address": "WARD 2\nNEAR BUS STAND",
+    "complaint": "FEVER WITH COLD",
+    "symptoms": [
+      "dry cough",
+      "fever",
+      "anxiety"
+    ],
+    "prescription": "Rx (Suggested):\n1. Arsenicum 30C - 3 pills, 3 times a day\n2. Bryonia 30C - 3 pills, 3 times a day\n3. Belladonna 30C - 3 pills",
+    "date": "2026-02-12T14:43:44.410Z"
+  },
+  {
+    "name": "SHYAM LAL",
+    "age": "45",
+    "gender": "Male",
+    "mobile": "8867765678",
+    "address": "Ganga Nagar\nDewas",
+    "complaint": "ABDOMEN PAIN AND FEVER",
+    "symptoms": [
+      "headache",
+      "anxiety",
+      "dry cough"
+    ],
+    "prescription": "Rx (Suggested):\n1. Bryonia 30C - 3 pills, 3 times a day\n2. Belladonna 30C - 3 pills, 3 times a day\n3. Ignatia 30C - 3 pills, 3 times a day\n\n(Edit as needed)",
+    "date": "2026-02-12T16:01:31.063Z"
+  },
+  {
+    "name": "SEEMA",
+    "age": "45",
+    "gender": "Male",
+    "mobile": "9543546655",
+    "address": "84 SHYAM NAGAR NX",
+    "complaint": "PAIN IN BACK",
+    "symptoms": [
+      "fever",
+      "WITH THIRST"
+    ],
+    "prescription": "Rx (Suggested):\n1. Belladonna 30C - 3 pills, 3 times a\n\n(Edit as needed)",
+    "date": "2026-02-12T16:09:22.678Z"
+  },
+  {
+    "name": "SEEMA",
+    "age": "34",
+    "gender": "Female",
+    "mobile": "3463444433",
+    "address": "84 SHYAM NAGAR NX",
+    "complaint": "FEVER",
+    "symptoms": [
+      "urine - burning",
+      "abdomen - cutting"
+    ],
+    "prescription": "Rx (Suggested):\n1. Theridion 30C - 3 pills, 3 times a day\n2. Agaricus Muscarius 30C - 3 pills, 3 times a day\n3.ugyghhjgh\n\n(Edit as needed)",
+    "date": "2026-02-12T16:30:13.976Z"
+  },
+  {
+    "name": "Dr Narayan Singh Bamania",
+    "age": "55",
+    "gender": "Male",
+    "mobile": "9300119509",
+    "address": "Ganga Nagar\nDewas",
+    "complaint": "fever",
+    "symptoms": [
+      "head - fullness",
+      "abdomen - burning"
+    ],
+    "prescription": "Rx (Suggested):\n1. Agaricus Muscarius 30C - 3 pills, 3 times a day\n2. Trillium Pendulum 30C - 3 pills, 3 times a day\n3. Ferrum Metallicum 30C - 3 pills, 3 times a day\n\n(Edit as needed)",
+    "date": "2026-02-12T16:57:27.548Z"
+  },
+  {
+    "name": "BALU",
+    "age": "22",
+    "gender": "Female",
+    "mobile": "9088776765",
+    "address": "56 GANGA NAGAR",
+    "complaint": "FEVER WITH COLD",
+    "symptoms": [
+      "mind - upper - digging",
+      "stomach - coldness"
+    ],
+    "prescription": "Rx (Suggested):\n1. Syphilinum 30C - 3 pills, 3 times a day\n2. Arsenicum Iodatum 30C - 3 pills, 3 times a day\n3. Lac Caninum 30C - 3 pills, 3 times a day\n\n(Edit as needed)",
+    "date": "2026-02-13T10:04:20.554Z"
+  },
+  {
+    "name": "pranvi bmania",
+    "age": "22",
+    "gender": "Female",
+    "mobile": "2333222222",
+    "address": "233333",
+    "complaint": "3333",
+    "symptoms": [
+      "fff"
+    ],
+    "prescription": "",
+    "date": "2026-02-13T17:33:24.291Z",
+    "id": "case_1771004004294_ht7k5udmm",
+    "createdAt": "2026-02-13T17:33:24.291Z",
+    "updatedAt": "2026-02-13T17:33:24.307Z"
+  },
+  {
+    "name": "Test Patient",
+    "age": 30,
+    "gender": "Male",
+    "mobile": "1234567890",
+    "address": "",
+    "complaint": "Testing the app",
+    "symptoms": [
+      "test symptom"
+    ],
+    "prescription": "Rest and water",
+    "date": "2026-02-13T19:00:18.592Z",
+    "id": "case_1771009218592_8yrq44dvm",
+    "createdAt": "2026-02-13T19:00:18.592Z",
+    "updatedAt": "2026-02-13T19:00:18.592Z"
+  }
+]
