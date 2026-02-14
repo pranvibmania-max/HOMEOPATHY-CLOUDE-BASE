@@ -4,7 +4,7 @@ const fs = require("fs");
 const path = require("path");
 const zlib = require("zlib");
 
-const app = express();const path = require('path');
+const app = express();
 
 // Serve frontend static files
 app.use(express.static(path.join(__dirname, '../frontend')));
