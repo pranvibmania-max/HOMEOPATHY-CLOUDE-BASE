@@ -4,7 +4,15 @@ const fs = require("fs");
 const path = require("path");
 const zlib = require("zlib");
 
-const app = express();
+const app = express();const path = require('path');
+
+// Serve frontend static files
+app.use(express.static(path.join(__dirname, '../frontend')));
+
+// Serve index.html on root
+app.get('/', (req, res) => {
+    res.sendFile(path.join(__dirname, '../frontend/index.html'));
+});
 
 // ── Middleware ───────────────────────────────────────────────────────────────
 
